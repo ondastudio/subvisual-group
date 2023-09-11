@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       navlinks.forEach(link => {
         link.addEventListener("click", () => {
+            console.log("cenas");
           if (button.classList.contains("is-open")) {
             openNav.timeScale(0.8);
             openNav.reverse();
