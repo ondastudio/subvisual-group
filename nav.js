@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
   
       const button = document.querySelector(".nav-button");
-      const navlinks = document.querySelectorAll(".mb-nav-link");
   
       button.addEventListener("click", () => {
         if (button.classList.contains("is-open")) {
@@ -68,21 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
           openNav.restart();
           button.classList.add("is-open");
         }
-      });
-
-      navlinks.forEach(link => {
-        link.addEventListener("click", () => {
-            console.log("cenas");
-          if (button.classList.contains("is-open")) {
-            openNav.timeScale(0.8);
-            openNav.reverse();
-            button.classList.remove("is-open");
-          } else {
-            openNav.timeScale(1);
-            openNav.restart();
-            button.classList.add("is-open");
-          }
-        });
       });
     }
   });
